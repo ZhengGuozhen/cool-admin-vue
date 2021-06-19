@@ -23,7 +23,9 @@ export const baseUrl = (function() {
 		proxy = store.get("proxy") || "dev";
 	}
 
-	return isDev ? `/${proxy}/admin` : `/api/admin`;
+	// @zgz，后台不响应 /api/...
+	// return isDev ? `/${proxy}/admin` : `/api/admin`;
+	return isDev ? `/${proxy}/admin` : `/admin`;
 })();
 
 // 阿里字体图标库 https://at.alicdn.com/t/**.css

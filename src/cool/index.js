@@ -41,6 +41,8 @@ export default {
 		{
 			name: "theme",
 			value: Theme
-		}
+		},
+		// @zgz 外部模块，配置后，权限组件会自动添加相关元素
+		"z-module"
 	]
 };
