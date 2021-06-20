@@ -70,7 +70,11 @@ function useModule(app: any) {
 		}
 	}
 
-	const files = import.meta.globEager("/src/cool/modules/**/*");
+	// @zgz
+	// const files = import.meta.globEager("/src/cool/modules/**/*");
+	const files1 = import.meta.globEager("/src/cool/modules/**/*");
+	const files2 = import.meta.globEager("/src/app-z/modules/**/*");
+	const files = Object.assign({}, files1, files2);
 
 	for (const i in files) {
 		const [, , , , name, fn, cname] = i.split("/");
