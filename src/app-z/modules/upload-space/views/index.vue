@@ -43,6 +43,7 @@
 							:on-error="onError"
 							:on-progress="onProgress"
 							:before-upload="beforeUpload"
+							:multiple="multiple"
 						>
 							<el-button size="mini" type="primary">点击上传</el-button>
 						</cl-upload>
@@ -100,6 +101,7 @@
 								:on-error="onError"
 								:on-progress="onProgress"
 								:before-upload="beforeUpload"
+								:multiple="multiple"
 							>
 								<i class="el-icon-upload"></i>
 								<div class="el-upload__text">
@@ -183,6 +185,11 @@ export default defineComponent({
 		detailData: Boolean,
 		// 是否显示按钮
 		showButton: {
+			type: Boolean,
+			default: true
+		},
+		// @zgz 是否多选
+		multiple: {
 			type: Boolean,
 			default: true
 		}
